@@ -1,5 +1,5 @@
 
-# flex-poster
+# flex.poster
 
 Prepare reproducible conference posters using R Markdown
 
@@ -10,7 +10,7 @@ Leon](https://github.com/odeleongt) with changes from [Luke
 Johnston](https://github.com/lwjohnst86)
 
 > Although several workflows are currently available for academic poster
-> preparation none of them are ideal. Commonly, point-and-click software
+> preparation none of them are ideal Commonly, point-and-click software
 > is used to arrange poster content regardless of the analysis pipeline.
 > Most of these software tools are proprietary, thus trapping our
 > content. Typical free and script based tools such as $\\LaTeX$ might

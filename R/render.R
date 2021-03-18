@@ -56,7 +56,7 @@ render_poster_image <- function(
   delay = 1
 ){
   # Render poster
-  webshot::webshot(
+  webshot2::webshot(
     url = input,
     file = output_file,
     vwidth = width,

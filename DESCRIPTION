@@ -1,17 +1,16 @@
 Package: flex.poster
 Title: Conference posters using RMarkdown and Flexdashboard
 Version: 0.0.1.9000
-Description: Templates for using flexdashboard to create posters. Modifed from Oscar de Leon's 2018 package
+Description: Templates for using flexdashboard to create posters. Modifed from Oscar de Leon's 2018 package.
 Authors@R: person("Rob", "Cavanaugh", email = "rob.cavanaugh@pitt.edut", role = c("aut", "cre"))
-Depends: R (>= 4.0.2)
+Depends: R (>= 4.0.0)
 Imports:
     rmarkdown (>= 2.7),
     flexdashboard (>= 0.5.2),
-    webshot (>= 0.5.2)
+Remotes: rstudio/webshot2
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 URL: https://rbcavanaugh.github.io/flex.poster
 BugReports: https://github.com/rbcavanaugh/flex.poster/issues/
 RoxygenNote: 7.1.1
-Suggests: testthat

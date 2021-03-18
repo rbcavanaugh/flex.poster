@@ -1,4 +1,4 @@
-Package: flex-poster
+Package: flex.poster
 Title: Conference posters using RMarkdown and Flexdashboard
 Version: 0.0.1.9000
 Description: Templates for using flexdashboard to create posters. Modifed from Oscar de Leon's 

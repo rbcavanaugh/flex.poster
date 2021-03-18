@@ -4,14 +4,16 @@ output:
     html_preview: false
 ---
 
-# postr
+# flex-poster
 
 Prepare reproducible conference posters using R Markdown
 
-
 ## Overview
 
-Although several workflows are currently available for academic
+Modified version of the postr package from [Oscar de Leon](https://github.com/odeleongt) with changes from [Luke Johnston](https://github.com/lwjohnst86)
+
+
+> Although several workflows are currently available for academic
 poster preparation none of them are ideal.
 Commonly, point-and-click software is used to arrange poster content
 regardless of the analysis pipeline.
@@ -19,7 +21,7 @@ Most of these software tools are proprietary, thus trapping our content.
 Typical free and script based tools such as $\LaTeX$ might not be appealing
 or seem as complex as using a point-and-click tool.
 
-This package provides templates and helper functions to
+> This package provides templates and helper functions to
 prepare R Markdown based conference posters with a free and reproducible
 workflow and
 produce output both in html for hosting and png for printing.

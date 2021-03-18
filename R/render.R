@@ -48,10 +48,10 @@
 render_poster_image <- function(
   input,
   output_file = paste0(tools::file_path_sans_ext(input), '.png'),
-  width = 1200,
-  aspect_ratio = sqrt(2),
+  width = 1600,
+  aspect_ratio = 3/4,
   height = floor(width * aspect_ratio),
-  poster_width = 594,
+  poster_width = 800,
   dpi = 300,
   delay = 1
 ){

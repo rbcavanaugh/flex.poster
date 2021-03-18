@@ -13,7 +13,7 @@ Imports:
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/odeleongt/postr
+URL: https://rbcavanaugh.github.io/postr, https://github.com/odeleongt/postr
 BugReports: https://github.com/odeleongt/postr/issues/
 RoxygenNote: 6.0.1
 Suggests: testthat

@@ -1,4 +1,10 @@
 library(shiny)
+
+#' get authors
+#'
+#' @description
+#' utility fuctions for getting authors from metadata
+#' @export
 authors<- function(){
   len = length(meta$author)
   ls = list()
@@ -15,6 +21,11 @@ authors<- function(){
   return(with_header)
 }
 
+#' get affilitations
+#'
+#' @description
+#' utility fuctions for getting affiliations from metadata
+#' @export
 affiliations<- function(){
   len = length(meta$affiliation)
   ls = list()
@@ -29,3 +40,4 @@ affiliations<- function(){
   with_header = paste0('<h3>', no_commas, '</h3>')
 
   return(with_header)
+}

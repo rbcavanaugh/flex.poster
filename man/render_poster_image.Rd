@@ -4,13 +4,22 @@
 \alias{render_poster_image}
 \title{Render a poster into a printable image}
 \usage{
-render_poster_image(input,
+render_poster_image(
+  input,
   output_file = paste0(tools::file_path_sans_ext(input), ".png"),
-  width = 1200, aspect_ratio = sqrt(2), height = floor(width *
-  aspect_ratio), poster_width = 594, dpi = 300, delay = 1)
+  width = 1600,
+  aspect_ratio = 3/4,
+  height = floor(width * aspect_ratio),
+  poster_width = 800,
+  dpi = 300,
+  delay = 1
+)
 }
 \arguments{
 \item{input}{Input file (an html generated with \code{\link{flex_dashboard_poster}}).}
+
+\item{output_file}{Output file. Defaults to the same name that the input file,
+but uses the png extension.}
 
 \item{width}{Width, in pixels, for the viewport
 (see \code{\link[webshot]{webshot}}). This will impact the size of elements
@@ -35,9 +44,6 @@ with the intended resolution.}
 \item{delay}{Time in seconds for phantomJS to wait while the page loads
 before taking the snapshot.}
 
-\item{output}{Output file. Defaults to the same name that the input file,
-but uses the png extension.}
-
 \item{...}{Ignored}
 }
 \value{
@@ -59,10 +65,10 @@ increase in resolution when downscaling.
 \examples{
 \dontrun{
 # generate a simple poster from the provided template
-rmarkdown::draft("my_poster.Rmd", template = "poster", package = "postr")
+rmarkdown::draft("my_poster.Rmd", template = "poster", package = "flex.poster")
 # render the html output
 rmarkdown::render(input = "my_poster/my_poster.Rmd")
 # render the png poster
-postr::render("my_poster/my_poster.html")
+flex.poster::render_poster_image("my_poster/my_poster.html")
 }
 }

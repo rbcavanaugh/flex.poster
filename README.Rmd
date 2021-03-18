@@ -4,7 +4,7 @@ output:
     html_preview: false
 ---
 
-# flex-poster
+# flex.poster
 
 Prepare reproducible conference posters using R Markdown
 
@@ -14,7 +14,7 @@ Modified version of the postr package from [Oscar de Leon](https://github.com/od
 
 
 > Although several workflows are currently available for academic
-poster preparation none of them are ideal.
+poster preparation none of them are ideal
 Commonly, point-and-click software is used to arrange poster content
 regardless of the analysis pipeline.
 Most of these software tools are proprietary, thus trapping our content.

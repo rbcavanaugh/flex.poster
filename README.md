@@ -40,15 +40,15 @@ In order to use this poster template, you need to:
     [`rbcavanaugh/flex.poster`](https://github.com/rbcavanaugh/flex.poster)
     package from github
     `devtools::install_github("rbcavanaugh/flex.poster")`
-
-> 2.  Install the PhantomJS library `webshot::install_phantomjs()`
-> 3.  Create a new R Markdown document in Rstudio based on the poster
->     template, or run
->     `rmarkdown::draft("my_poster.Rmd", template = "poster", package = "postr")`
-> 4.  Render the poster as an html file:
->     `rmarkdown::render("my_poster.Rmd")`
-> 5.  Convert the html file as a printable A1 image:
->     `postr::render("my_poster.html")`
+2.  Install the PhantomJS library `webshot::install_phantomjs()`
+3.  Create a new R Markdown document in Rstudio based on the poster
+    template, or run
+    `rmarkdown::draft("my_poster.Rmd", template = "poster", package = "flex.poster")`
+4.  Render the poster as an html file:
+    `rmarkdown::render("my_poster.Rmd")` (or just hit knit in rstudio).
+    set render\_print: to false until you’re ready to make the poster.
+5.  Convert the html file as a printable A1 image:
+    `flex.poster::render_poster_image("my_poster.html")`
 
 ## References
 

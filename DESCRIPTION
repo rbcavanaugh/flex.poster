@@ -1,19 +1,17 @@
-Package: postr
-Title: Prepare reproducible posters using R Markdown
+Package: flex-poster
+Title: Conference posters using RMarkdown and Flexdashboard
 Version: 0.0.1.9000
-Description: Templates and helper functions to prepare R Markdown based conference
-    posters and produce output both in html for hosting and png for printing.
-    Relies on the flexdashboard package to easily define poster layout.
-Authors@R: person("Oscar", "de León", email = "odeleon@ces.uvg.edu.gt", role = c("aut", "cre"))
-Depends: R (>= 3.0.2)
+Description: Templates for using flexdashboard to create posters. Modifed from Oscar de Leon's 
+Authors@R: person("Rob", "Cavanaugh", email = "rob.cavanaugh@pitt.edut", role = c("aut", "cre"))
+Depends: R (>= 4.0.2)
 Imports:
-    rmarkdown (>= 1.8),
-    flexdashboard (>= 0.5),
-    webshot (>= 0.4.1)
+    rmarkdown (>= 2.7),
+    flexdashboard (>= 5.2),
+    webshot (>= 0.5.2)
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-URL: https://rbcavanaugh.github.io/postr, https://github.com/odeleongt/postr
-BugReports: https://github.com/odeleongt/postr/issues/
+URL: https://rbcavanaugh.github.io/postr
+BugReports: https://github.com/rbcavanaugh/postr/issues/
 RoxygenNote: 6.0.1
 Suggests: testthat

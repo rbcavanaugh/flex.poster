@@ -24,35 +24,39 @@ Johnston](https://github.com/lwjohnst86)
 
 ## Dependencies
 
-This poster template depends on the following R packages
-
--   rmarkdown
--   flexdashboard
--   webshot
+> This poster template depends on the following R packages
+>
+> -   rmarkdown
+> -   flexdashboard
+> -   webshot
 
 ## Preparing a new poster
 
 In order to use this poster template, you need to:
 
-1.  Install the [`odeleongt/postr`](https://github.com/odeleongt/postr)
-    package from github `devtools::install_github("odeleongt/postr")`
-2.  Install the PhantomJS library `webshot::install_phantomjs()`
-3.  Create a new R Markdown document in Rstudio based on the poster
-    template, or run
-    `rmarkdown::draft("my_poster.Rmd", template = "poster", package = "postr")`
-4.  Render the poster as an html file:
-    `rmarkdown::render("my_poster.Rmd")`
-5.  Convert the html file as a printable A1 image:
-    `postr::render("my_poster.html")`
+1.  Install the
+    [`rbcavanaugh/flex.poster`](https://github.com/rbcavanaugh/flex.poster)
+    package from github
+    `devtools::install_github("rbcavanaugh/flex.poster")`
+
+> 2.  Install the PhantomJS library `webshot::install_phantomjs()`
+> 3.  Create a new R Markdown document in Rstudio based on the poster
+>     template, or run
+>     `rmarkdown::draft("my_poster.Rmd", template = "poster", package = "postr")`
+> 4.  Render the poster as an html file:
+>     `rmarkdown::render("my_poster.Rmd")`
+> 5.  Convert the html file as a printable A1 image:
+>     `postr::render("my_poster.html")`
 
 ## References
 
--   JJ Allaire, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
-    Ushey, Aron Atkins, Hadley Wickham, Joe Cheng and Winston Chang
-    (2017). rmarkdown: Dynamic Documents for R. R package version 1.8.
-    <https://CRAN.R-project.org/package=rmarkdown>
--   Barbara Borges and JJ Allaire (2017). flexdashboard: R Markdown
-    Format for Flexible Dashboards. R package version 0.5.1.
-    <https://CRAN.R-project.org/package=flexdashboard>
--   Winston Chang (2017). webshot: Take Screenshots of Web Pages. R
-    package version 0.5.0. <https://CRAN.R-project.org/package=webshot>
+> -   JJ Allaire, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin
+>     Ushey, Aron Atkins, Hadley Wickham, Joe Cheng and Winston Chang
+>     (2017). rmarkdown: Dynamic Documents for R. R package version 1.8.
+>     <https://CRAN.R-project.org/package=rmarkdown>
+> -   Barbara Borges and JJ Allaire (2017). flexdashboard: R Markdown
+>     Format for Flexible Dashboards. R package version 0.5.1.
+>     <https://CRAN.R-project.org/package=flexdashboard>
+> -   Winston Chang (2017). webshot: Take Screenshots of Web Pages. R
+>     package version 0.5.0.
+>     <https://CRAN.R-project.org/package=webshot>

@@ -45,7 +45,7 @@ flex_dashboard_poster <- function(
         input_poster <- paste(
           dirname(original_input), output_dir, output_file, sep = "/"
         )
-        postr::render(input = input_poster)
+        flex.poster::render(input = input_poster)
       }
       environment(print_render) <- parent.frame(n = 2)
       print_render()

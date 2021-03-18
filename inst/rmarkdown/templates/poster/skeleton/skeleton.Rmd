@@ -1,8 +1,8 @@
 ---
 title: "**Short title:** Flexdashboard poster template"
 output: 
-  postr::flex_dashboard_poster:
-    render_print: true
+  flex.poster::flex_dashboard_poster:
+    render_print: false
 ---
 
 

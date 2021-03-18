@@ -7,7 +7,9 @@ Prepare reproducible conference posters using R Markdown
 
 Modified version of the postr package from [Oscar de
 Leon](https://github.com/odeleongt) with changes from [Luke
-Johnston](https://github.com/lwjohnst86)
+Johnston](https://github.com/lwjohnst86). All credit to these two - this
+is just modified for my specific needs. Full disclosure: I have no idea
+what I’m doing.
 
 > Although several workflows are currently available for academic poster
 > preparation none of them are ideal Commonly, point-and-click software

@@ -7,7 +7,7 @@ Stop using powerpoint for posters. No really, life can be easier.
 
 Modified version of the postr package from [Oscar de
 Leon](https://github.com/odeleongt) with changes from [Luke
-Johnston](https://github.com/lwjohnst86). Also big thanks to the tutial
+Johnston](https://github.com/lwjohnst86). Also big thanks to the tutorial
 [here](https://wytham.rbind.io/post/making-a-poster-in-r/) by Wei Yan
 Tham. This package consists of some minor updates and incorporating some
 functionality I liked from

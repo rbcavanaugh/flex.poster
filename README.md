@@ -1,7 +1,7 @@
 
 # flex.poster
 
-Stop using powerpoint for posters. No really, life can be easier.
+Stop using powerpoint for posters. Or something like that.
 
 ## Overview
 
@@ -13,7 +13,7 @@ Tham. This package consists of some minor updates and incorporating some
 functionality I liked from
 [posterdown](https://github.com/brentthorne/posterdown), which is
 another good option for poster templates in Rmarkdown. Full disclosure:
-I have no idea what I’m doing.
+I have no idea what I’m doing.\*
 
 > This package provides templates and helper functions to prepare R
 > Markdown based conference posters with a free and reproducible
@@ -28,6 +28,9 @@ formatting, capture the screenshot. Maybe you open the image and save as
 PDF somewhere else. More time spent on writing good content, less time
 fussing with the padding between text boxes on powerpoint. I did this to
 save time for my future self. I will undoubtedly save lots of time.
+
+\*If this package works for you, you should probably just clone it and
+save it as your own. Who knows how I’ll screw this up in the future.
 
 <center>
 

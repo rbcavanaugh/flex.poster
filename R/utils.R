@@ -4,11 +4,9 @@
 #' utility functions for generating title box
 #' @export
 title_text <- function(){
-  if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
     tt = paste0('<h2 id=poster_title>',meta$title,'</h2>')
     return(tt)
-  }
 }
 
 #' Utility functions for generating authors.
@@ -16,7 +14,6 @@ title_text <- function(){
 #' utility functions for generating title box
 #' @export
 authors_text<- function(){
-  if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
     len = length(meta$author)
     ls = list()
@@ -31,7 +28,6 @@ authors_text<- function(){
     with_header = paste0('<h4 id=poster_authors>', no_commas, '</h4>')
 
     return(with_header)
-  }
 }
 
 #' Utility functions for generating affilitations.
@@ -39,7 +35,6 @@ authors_text<- function(){
 #' utility functions for generating title box
 #' @export
 affiliations_text<- function(){
-  if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
     len = length(meta$affiliation)
     ls = list()
@@ -54,6 +49,5 @@ affiliations_text<- function(){
     with_header = paste0('<p style = "color:white; text-align:center; font-style:italic;">', no_commas, '</p>')
 
     return(with_header)
-  }
 }
 

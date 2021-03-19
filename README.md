@@ -1,8 +1,6 @@
 
 # flex.poster
 
-Stop using powerpoint for posters. Or something like that.
-
 ## Overview
 
 Modified version of the postr package from [Oscar de

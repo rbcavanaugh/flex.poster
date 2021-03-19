@@ -7,7 +7,7 @@ Stop using powerpoint for posters. No really, life can be easier.
 
 Modified version of the postr package from [Oscar de
 Leon](https://github.com/odeleongt) with changes from [Luke
-Johnston](https://github.com/lwjohnst86). Also big thanks to the tutial
+Johnston](https://github.com/lwjohnst86). Also big thanks to the tutorial
 [here](https://wytham.rbind.io/post/making-a-poster-in-r/) by Wei Yan
 Tham. This package consists of some minor updates and incorporating some
 functionality I liked from
@@ -22,12 +22,19 @@ I have no idea what I’m doing.
 > layout.
 
 But really, making a poster with
+<<<<<<< HEAD
 [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) is as
 relative straightforward: write the rmarkdown text, check the size
 formatting, capture the screenshot. Maybe you open the image and save as
 PDF somewhere else. More time spent on writing good content, less time
 fussing with the padding between text boxes on powerpoint. I did this to
 save time for my future self. I will undoubtedly save lots of time.
+=======
+[flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) is
+relatively straightforward: write the rmarkdown code, check the
+sizing formatting, take the screenshot. More time on content, less time on formatting the padding between text boxes on powerpoint. I did this to
+save time for my future self and automated it. 
+>>>>>>> 1715f73dd5822fb419df095e76d52fdf443b12f1
 
 <center>
 

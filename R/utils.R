@@ -3,7 +3,7 @@
 #' @description
 #' utility functions for generating title box
 #' @export
-title <- function(){
+title_text <- function(){
   if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
     paste0('<h2 id=poster_title>',meta$title,'</h2>')
@@ -14,7 +14,7 @@ title <- function(){
 #' @description
 #' utility functions for generating title box
 #' @export
-authors<- function(){
+authors_text<- function(){
   if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
     len = length(meta$author)
@@ -37,7 +37,7 @@ authors<- function(){
 #' @description
 #' utility functions for generating title box
 #' @export
-affiliations<- function(){
+affiliations_text<- function(){
   if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
     len = length(meta$affiliation)
@@ -56,9 +56,3 @@ affiliations<- function(){
   }
 }
 
-title_box <- shiny::div(htmltools::HTML(
-  title(),
-  authors(),
-  affiliations()
-)
-)

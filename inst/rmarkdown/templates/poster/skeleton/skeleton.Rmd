@@ -41,7 +41,7 @@ library(flex.poster)
 
 /* CSS left here for easy editing. Note, Rstudio will make it look like things are tagged out but only slask-asterisk will tag out in this chunk */
 
-/* font to be imported if using non standard fonts */
+/* font to be imported if using non standard fonts. See here: https://fonts.google.com/. Select font, copy and paste link. */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
 
 /* Choose font for poster (though it can be specified in any section specifically) /*

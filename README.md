@@ -22,8 +22,8 @@ I have no idea what I’m doing.
 > layout.
 
 But really, making a poster with
-[flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) is as
-relative straightforward: writing the rmarkdown text, checking the
+[flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) is
+relatively straightforward: writing the rmarkdown text, checking the
 sizing formatting, rendering any images within the poster or just
 loading pre-rendered images, and rendering any tables. I did this to
 save time for my future self and automated it.

@@ -6,7 +6,8 @@
 title_text <- function(){
   if(exists("rmarkdown::metadata")){
     meta = rmarkdown::metadata
-    paste0('<h2 id=poster_title>',meta$title,'</h2>')
+    tt = paste0('<h2 id=poster_title>',meta$title,'</h2>')
+    return(tt)
   }
 }
 

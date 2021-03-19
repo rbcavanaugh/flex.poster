@@ -22,7 +22,8 @@
 #' @param aspect_ratio Aspect ratio between the height and the width of the
 #'   viewport. The poster orientation will depend on this ratio; if it is
 #'   > 1 the orientation is portrait (height > width), and if it is < 1 the
-#'   orientation is landscape (width > height)
+#'   orientation is landscape (width > height). The default is 3/4 which corresponds
+#'   to a poster which is 48" wide and 36" tall.
 #' @param height Calculated using as \code{width * aspect_ratio}, rounded down.
 #' @param poster_width Intended physical width of the printed poster, in mm.
 #'   Defaults to the width of an A1 sheet with portrait orientation.

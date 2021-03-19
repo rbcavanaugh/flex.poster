@@ -46,7 +46,7 @@ affiliations_text<- function(){
 
     together = toString(unlist(ls))
     no_commas = gsub(',', '', together)
-    with_header = paste0('<p style = "color:white; text-align:center; font-style:italic;">', no_commas, '</p>')
+    with_header = paste0('<p id=affiliations>', no_commas, '</p>')
 
     return(with_header)
 }

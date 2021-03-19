@@ -23,8 +23,8 @@ I have no idea what I’m doing.
 
 But really, making a poster with
 [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/) is
-relatively straightforward: writing the rmarkdown code, checking the
-sizing formatting, taking screen shot. More time on content, less time on formatting the padding between text boxes on powerpoint. I did this to
+relatively straightforward: write the rmarkdown code, check the
+sizing formatting, take the screenshot. More time on content, less time on formatting the padding between text boxes on powerpoint. I did this to
 save time for my future self and automated it. 
 
 <center>

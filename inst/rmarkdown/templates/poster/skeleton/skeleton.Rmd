@@ -1,88 +1,229 @@
 ---
-title: "**Short title:** Flexdashboard poster template"
+title: "Is there a research-practice dosage gap in aphasia rehabilitation?"
+author:
+  - name: Rachael Price
+    affil: 1
+  - name: Kishi Baskhi
+    affil: 2
+  - name: Taylor Swift
+    affil: 3
+  - name: Andrew Bird
+    affil: 4
+  - name: Lyle Lovett
+    affil: 1
+  - name: Dolly Parton
+    affil: 1
+affiliation:
+  - num: 1
+    address: University of Pittsburgh
+  - num: 2
+    address: Centers for Rehab Services, UPMC
+  - num: 3
+    address: University of South Carolina
+  - num: 4
+    address: Northwestern University
 output: 
   flex.poster::flex_dashboard_poster:
     render_print: false
 ---
 
+<!-- The following code chunk contains css which can be used to change the look of the document. Some of the CSS  -->
 
+```{r}
+library(tidyverse)
+library(here)
+library(patchwork)
+library(shiny)
+library(flex.poster)
+```
+
+```{css echo = FALSE}
+
+/* CSS left here for easy editing. Note, Rstudio will make it look like things are tagged out but only slask-asterisk will tag out in this chunk */
+
+/* font to be imported if using non standard fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
+
+/* Choose font for poster (though it can be specified in any section specifically) /*
+/* CHoose background-color of flexdashboard */
+/* choose base font size (smallest font size) - this may take some fussing to get right */
+body{
+  font-family: "Open Sans";
+  background-color: #C8C9C7;
+  font-size: 14px;
+}
+
+/* title */
+#poster_title {
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Merriweather";
+}
+
+/* authors */
+#poster_authors {
+ color:white;
+ text-align:center;
+}
+
+/* affiliations text */
+#affiliations {
+ color:white;
+ text-align:center;
+ font-style:italic;
+}
+  
+
+/* This poorly labeled chunk will choose the background color of the center title block and any other blocks given this class */
+.bgred {
+  background-color:#003594;
+}
+
+/* padding to the left of lists to save some space */
+ol, ul {
+  padding-left: 1.2em;
+}
+
+ /* CSS to help with general formatting and poster rendering */
+  
+/* gets rid of navbar and some scroll bars*/
+.navbar {
+  visibility: hidden
+}
+body {
+  padding-top:10px;
+  overflow: hidden;
+}
+
+
+/* decreasing spacing between title images and center block*/
+
+/* padding around logos */
+.sideimage {
+  padding: 10px;
+}
+
+/* no scrollbars! */
+::-webkit-scrollbar { width: 0 !important }
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* weird flexdashboard thing with titles I didnt like */
+.chart-shim {
+position: absolute;
+left: 8px;
+top: 0px;
+right: 8px;
+bottom: 8px;
+}
+
+}
+```
+
+<!-- This header row is the top row of the poster -->
 ## Header row {data-height=15}
 
-###
+<!-- Left image or logo -->
+### {.sideimage data-width=100}
 
-<table style="width:100%">
-<tr>
-  <td><center><h3>
-  **Poster title**
-  </h3></center></td>
-  <td rowspan="2">
-  <img src="resources/logo.png" style="width:128px"></img>
-  </td>
-</tr>
-<tr><td><center>
-  **Author**
-  </center></td>
-</tr>
-</table> 
+![](picture2.png)
+<!-- Center title block. Lots of divs because centering vertically is something I don't understand yet -->
+### {.bgred data-width=600}
 
-<hr>
+```{r dontmesswiththis}
 
-**Abstract** This paragraph will be rendered inside a wide box right below the
-poster title and authors information.
-The `render_print` format option is set to `TRUE` by default in this poster
-sample, and will result in `postr::render` being called when knitting the
-document (see `help("flex_dashboard_poster", package = postr)`).
-To disable this (recommended in the initial stages of poster development)
-set the `render_print` option to `FALSE`.
+div(
+  div(
+    htmltools::HTML(
+      title_text(),
+      authors_text(),
+      affiliations_text()
+      )
+    ), style = "
+   width:100%;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   "
+  )
 
+```
 
 
+<!-- Right logo -->
 
+### {.bgred .sideimage data-width=100}
+
+![](logopitt3.png)
+<!-- Second row in the document. There are 3 panels but...do what you want! -->
 ## Body row {data-height=75}
 
-### **Column 1 title**
+<!-- First panel -->
+### **Introduction** {data-width=400}
 
-#### Heading
+<!-- note 4-hash header is within the box -->
+#### Motivation
+1. Few studies have evaluated the translation and implementation of evidence-based aphasia interventions to clinical practice.
+2. Dosage may be especially challenging to translate from clinical research to clinical practice settings.
+3. Dosage may be reduced in clinical practice due to pragmatic constraints on access to care.
+4. A dosage mismatch between research and clinical practice threatens the external validity of treatment research & risks attenuating intervention effectiveness
 
-This section defines the first column of the body row of the poster.
-You can include regular markdown text and R `code chunks`.
+#### Research Questions
+1. What is the typical treatment dose in an episode of care in outpatient rehabilitation clinical settings?
+2. What is the typical treatment dose in contemporary clinical aphasia studies?
+3. Is the dosage in research well-calibrated to current outpatient clinical practice?
 
-```{r}
-hist(volcano)
+### **Comparing dosage between clinical practice and research** {data-width=700}
+
+<!-- This is one way to put an image in, if it's pre-rendered. You can also render images easily in r-chunks. the shiny package will come in handy, even though we're not rendering a shiny app.  -->
+![](test1.png)
+<!-- third panel -->
+### **Data and Methods** {data-width=400}
+
+#### Clinical Dosage
+- Clinical treatment dosage estimated via utilization-billing data extracted from the Centers for Rehabilitation Services (CRS).
+- Inclusion: Patients receiving an evaluation (CPT: 92523, 96105) and treatment (92507) from an SLP from 2014-2019 with an ICD 9/10 diagnosis of aphasia and stroke.
+
+#### Research Dosage
+- Scoping review of prospective, behavioral treatment studies from 2009-2019
+- Extracted dosage variables and estimated additional non-reported variables if possible
+- Reliability (% agreement) for article inclusion/exclusion and data extraction >90%
+
+#### Analysis
+- Permutation tests and descriptive statistics were utilized to compare dosage variables
+
+<!-- Last row in the document. data-heights are relative to each other. the overall height will scale to fit the viewer window -->
+## Footer row {data-height=30}
+
+### {data-width=26}
+
+```{r, message=F}
+df <- read_csv("stats.csv")
+colnames(df) = c("Variable", "Median difference", "p-value")
+kableExtra::kbl(df) %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "condensed"))
 ```
 
+### Conclusion {data-width=30}
 
-### **Column 2 title**
+::: {.padtop style="padding-top:10px;"}
+- Meaningful dosage gap, especially total hours & weekly intensity. 
+- Thre threat to thernal validity of treatment research; potential for an attenuation of intervention effectiveness in outpatient settings. 
+- Future research should take steps to facilitate intervention implementation, particularly with regard to dosage. 
+- Advocacy and alternative delivery methods are necessary to support treatments with higher dosage.
+:::
 
-Content for the second column.
-
-To show the code in the chunks you have to ask for it with `echo=TRUE`.
-
-```{r volcano-heat, echo=TRUE, eval=FALSE}
-filled.contour(volcano, color.palette = terrain.colors, asp = 1)
-```
-
-You can also include data frames as tables just by printing them
-
-```{r}
-head(iris)
-```
-
-
-
-### **Column 3 title**
-
-This template shows 3 columns in the body row, you can change this by adding
-or removing third level headings (i.e. lines starting with ###).
-
-
-
-
-
-## Footer row {data-height=10} 
-
-### {data-width=50}
-
-
-### {data-width=50 .small}
+<!-- You can also include references using the [@reference] notation and save your references in a .bib file and reference that file in the YAML! This will also interface with zotero if you want to get real fancy. -->
+### References & Acknowledgements {.noov data-width=28}
+::: {.padtop2 style="padding:1px 1px; margin: 0; font-size: .7em; overflow:hidden"}
+- Baker, E. (2012). Optimal intervention intensity in speech-language pathology: Discoveries, challenges, and unchartered territories. International Journal of Speech-Language Pathology, 14(5), 478–485.
+- Harvey, S. R., Carragher, M., Dickey, M. W., Pierce, J. E., & Rose, M. L. (2020). Treatment dose in post-stroke aphasia: A systematic scoping review. Neuropsychological Rehabilitation, 1–32.
+- Konietschke, F., & Pauly, M. (2014). Bootstrapping and permuting paired t-test type statistics. Statistics and Computing, 24(3), 283–296.
+- Simmons-Mackie, N. (2018). Aphasia in North America. Aphasia Access.
+</div>
+<div style="padding-top:0px; margin: 0px; font-size: .67em; overflow:hidden">
+This work was supported by (1) NIH-NCATS TL1TR001858 fellowship awarded to the first author. (2) The SHRS Research Development Fund, University of Pittsburgh. 
+:::
 

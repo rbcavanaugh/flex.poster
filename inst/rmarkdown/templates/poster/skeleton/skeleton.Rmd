@@ -123,13 +123,16 @@ bottom: 8px;
 ```
 
 <!-- This header row is the top row of the poster -->
+
 ## Header row {data-height=15}
 
 <!-- Left image or logo -->
+
 ### {.sideimage data-width=100}
 
-![](picture2.png)
+![](resources/picture2.png)
 <!-- Center title block. Lots of divs because centering vertically is something I don't understand yet -->
+
 ### {.bgred data-width=600}
 
 ```{r dontmesswiththis}
@@ -156,14 +159,17 @@ div(
 
 ### {.bgred .sideimage data-width=100}
 
-![](logopitt3.png)
+![](resources/logopitt3.png)
 <!-- Second row in the document. There are 3 panels but...do what you want! -->
+
 ## Body row {data-height=75}
 
 <!-- First panel -->
+
 ### **Introduction** {data-width=400}
 
 <!-- note 4-hash header is within the box -->
+
 #### Motivation
 1. Few studies have evaluated the translation and implementation of evidence-based aphasia interventions to clinical practice.
 2. Dosage may be especially challenging to translate from clinical research to clinical practice settings.
@@ -178,8 +184,10 @@ div(
 ### **Comparing dosage between clinical practice and research** {data-width=700}
 
 <!-- This is one way to put an image in, if it's pre-rendered. You can also render images easily in r-chunks. the shiny package will come in handy, even though we're not rendering a shiny app.  -->
-![](test1.png)
+
+![](resources/test1.png)
 <!-- third panel -->
+
 ### **Data and Methods** {data-width=400}
 
 #### Clinical Dosage
@@ -195,12 +203,14 @@ div(
 - Permutation tests and descriptive statistics were utilized to compare dosage variables
 
 <!-- Last row in the document. data-heights are relative to each other. the overall height will scale to fit the viewer window -->
+
 ## Footer row {data-height=30}
 
 ### {data-width=26}
 
 ```{r, message=F}
-df <- read_csv("stats.csv")
+# may need to modify this file path to read in stats.csv. 
+df <- read_csv(here("resources", "stats.csv"))
 colnames(df) = c("Variable", "Median difference", "p-value")
 kableExtra::kbl(df) %>%
   kableExtra::kable_styling(bootstrap_options = c("striped", "condensed"))
@@ -216,6 +226,7 @@ kableExtra::kbl(df) %>%
 :::
 
 <!-- You can also include references using the [@reference] notation and save your references in a .bib file and reference that file in the YAML! This will also interface with zotero if you want to get real fancy. -->
+
 ### References & Acknowledgements {.noov data-width=28}
 ::: {.padtop2 style="padding:1px 1px; margin: 0; font-size: .7em; overflow:hidden"}
 - Baker, E. (2012). Optimal intervention intensity in speech-language pathology: Discoveries, challenges, and unchartered territories. International Journal of Speech-Language Pathology, 14(5), 478–485.

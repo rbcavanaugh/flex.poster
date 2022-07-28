@@ -5,7 +5,7 @@
 
 Modified version of the postr package from [Oscar de
 Leon](https://github.com/odeleongt) with changes from [Luke
-Johnston](https://github.com/lwjohnst86). Also see
+Johnston](https://github.com/lwjohnst86). Also big thanks to the tutial
 [here](https://wytham.rbind.io/post/making-a-poster-in-r/) by Wei Yan
 Tham. This package consists of some minor updates and incorporating some
 functionality I liked from
@@ -79,7 +79,7 @@ in your computer. see <https://github.com/rstudio/webshot2>*
 
 <center>
 
-<img src="images/aphasia-access-01.png" style="width:80%;" />
+<img src="images/AA_2021.png" style="width:80%;" />
 
 A new poster! Not quite done yet…
 

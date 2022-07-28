@@ -54,7 +54,7 @@ In order to use this poster template, you need to:
 
 <center>
 
-![](images/aphasia-access-01.png){style="width:80%;"}
+![](images/AA_2021.png){style="width:80%;"}
 
 A new poster! Not quite done yet...
 

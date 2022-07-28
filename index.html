@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">flex.poster</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -52,7 +48,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/rbcavanaugh/flex.poster/">
+  <a href="https://github.com/rbcavanaugh/flex.poster/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -69,92 +65,88 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="flexposter" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#flexposter" class="anchor"></a>flex.poster</h1></div>
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
-<p>Modified version of the postr package from <a href="https://github.com/odeleongt">Oscar de Leon</a> with changes from <a href="https://github.com/lwjohnst86">Luke Johnston</a>. Also see <a href="https://wytham.rbind.io/post/making-a-poster-in-r/">here</a> by Wei Yan Tham. This package consists of some minor updates and incorporating some functionality I liked from <a href="https://github.com/brentthorne/posterdown">posterdown</a>, which is another good option for poster templates in Rmarkdown. Full disclosure: I have no idea what I’m doing.*</p>
-<blockquote>
-<p>This package provides templates and helper functions to prepare R Markdown based conference posters with a free and reproducible workflow and produce output both in html for hosting and png for printing. Relies on the flexdashboard package to easily define poster layout.</p>
-</blockquote>
-<p>But really, making a poster with <a href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a> is as relative straightforward: write the rmarkdown text, check the size formatting, capture the screenshot. Maybe you open the image and save as PDF somewhere else. More time spent on writing good content, less time fussing with the padding between text boxes on powerpoint. I did this to save time for my future self. I will undoubtedly save lots of time.</p>
+<div class="section level1">
+<div class="page-header"><h1 id="flexposter">flex.poster<a class="anchor" aria-label="anchor" href="#flexposter"></a>
+</h1></div>
+<div class="section level2">
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
+<p>Modified version of the postr package from <a href="https://github.com/odeleongt" class="external-link">Oscar de Leon</a> with changes from <a href="https://github.com/lwjohnst86" class="external-link">Luke Johnston</a>. Also big thanks to the tutial <a href="https://wytham.rbind.io/post/making-a-poster-in-r/" class="external-link">here</a> by Wei Yan Tham. This package consists of some minor updates and incorporating some functionality I liked from <a href="https://github.com/brentthorne/posterdown" class="external-link">posterdown</a>, which is another good option for poster templates in Rmarkdown. Full disclosure: I have no idea what I’m doing.*</p>
+<blockquote><p>This package provides templates and helper functions to prepare R Markdown based conference posters with a free and reproducible workflow and produce output both in html for hosting and png for printing. Relies on the flexdashboard package to easily define poster layout.</p></blockquote>
+<p>But really, making a poster with <a href="https://rmarkdown.rstudio.com/flexdashboard/" class="external-link">flexdashboard</a> is as relative straightforward: write the rmarkdown text, check the size formatting, capture the screenshot. Maybe you open the image and save as PDF somewhere else. More time spent on writing good content, less time fussing with the padding between text boxes on powerpoint. I did this to save time for my future self. I will undoubtedly save lots of time.</p>
 <p>*If this package works for you, you should probably just clone it and save it as your own. Who knows how I’ll screw this up in the future.</p>
 <center>
-<p><img src="https://imgs.xkcd.com/comics/automation.png" alt="Relevant xkcd"></p>
-<p>source: <a href="https://imgs.xkcd.com/comics/automation.png" class="uri">https://imgs.xkcd.com/comics/automation.png</a></p>
+<div class="figure">
+<img src="https://imgs.xkcd.com/comics/automation.png" alt=""><p class="caption">Relevant xkcd</p>
+</div>
+<p>source: <a href="https://imgs.xkcd.com/comics/automation.png" class="external-link uri">https://imgs.xkcd.com/comics/automation.png</a></p>
 </center>
 </div>
-<div id="dependencies" class="section level2">
-<h2 class="hasAnchor">
-<a href="#dependencies" class="anchor"></a>Dependencies</h2>
-<blockquote>
-<p>This poster template depends on the following R packages</p>
-</blockquote>
+<div class="section level2">
+<h2 id="dependencies">Dependencies<a class="anchor" aria-label="anchor" href="#dependencies"></a>
+</h2>
+<blockquote><p>This poster template depends on the following R packages</p></blockquote>
 <ul>
 <li>rmarkdown</li>
 <li>flexdashboard</li>
 <li>webshot2</li>
 </ul>
 </div>
-<div id="preparing-a-new-poster" class="section level2">
-<h2 class="hasAnchor">
-<a href="#preparing-a-new-poster" class="anchor"></a>Preparing a new poster</h2>
+<div class="section level2">
+<h2 id="preparing-a-new-poster">Preparing a new poster<a class="anchor" aria-label="anchor" href="#preparing-a-new-poster"></a>
+</h2>
 <p>In order to use this poster template, you need to:</p>
-<ol>
+<ol style="list-style-type: decimal">
 <li><p>Install from github <code>devtools::install_github("rbcavanaugh/flex.poster")</code></p></li>
 <li>
-<p>Create a new R Markdown document in Rstudio based on the poster template, or run <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html">rmarkdown::draft("my_poster.Rmd", template = "poster", package = "flex.poster")</a></code></p>
-<ul>
-<li>The title, author, and affiliations in the YAML header will correspond to the title, authors, and affiliations helper functions. They can also be direct accessed through <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/metadata.html">rmarkdown::metadata</a></code>
+<p>Create a new R Markdown document in Rstudio based on the poster template, or run <code>rmarkdown::draft("my_poster.Rmd", template = "poster", package = "flex.poster")</code></p>
+<ul><li>The title, author, and affiliations in the YAML header will correspond to the title, authors, and affiliations helper functions. They can also be direct accessed through <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/metadata.html" class="external-link">rmarkdown::metadata</a></code>
+</li></ul>
 </li>
-</ul>
-</li>
-<li><p>Render the poster as an html file: <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html">rmarkdown::render("my_poster.Rmd")</a></code> (or just hit knit in rstudio). set render_print: to false until you’re ready to make the poster.</p></li>
+<li><p>Render the poster as an html file: <code>rmarkdown::render("my_poster.Rmd")</code> (or just hit knit in rstudio). set render_print: to false until you’re ready to make the poster.</p></li>
 <li>
 <p>Convert the html file as a printable image:</p>
-<p><code><a href="reference/render_poster_image.html">flex.poster::render_poster_image("my_poster.html")</a></code>. File conversion is done by taking a screenshot of the rendered HTML doc.</p>
+<p><code>flex.poster::render_poster_image("my_poster.html")</code>. File conversion is done by taking a screenshot of the rendered HTML doc.</p>
 </li>
 </ol>
-<p><em>note this update does not use webshot/phantonJs, but uses webshot2 which does not require phantonJs but does require chrome to be installed in your computer. see <a href="https://github.com/rstudio/webshot2" class="uri">https://github.com/rstudio/webshot2</a></em></p>
+<p><em>note this update does not use webshot/phantonJs, but uses webshot2 which does not require phantonJs but does require chrome to be installed in your computer. see <a href="https://github.com/rstudio/webshot2" class="external-link uri">https://github.com/rstudio/webshot2</a></em></p>
 </div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
 <center>
-<p><img src="images/aphasia-access-01.png" style="width:80%;"></p>
+<p><img src="images/AA_2021.png" style="width:80%;"></p>
 <p>A new poster! Not quite done yet…</p>
 </center>
 </div>
-<div id="tips" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tips" class="anchor"></a>Tips</h2>
+<div class="section level2">
+<h2 id="tips">Tips<a class="anchor" aria-label="anchor" href="#tips"></a>
+</h2>
 <ul>
 <li>A workflow to creating a poster should (1) create a subdirectory or rproject for the folder (2) save the template file as your own document (3) save any images/logos/pre-renderedplot/data in the same folder or use subfolders to organize these resources. (4) Add your content!</li>
 <li>
-<a href="https://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a> has great documentation for designing your desired layout.</li>
+<a href="https://rmarkdown.rstudio.com/flexdashboard/" class="external-link">flexdashboard</a> has great documentation for designing your desired layout.</li>
 <li>
 <code><a href="reference/render_poster_image.html">?render_poster_image</a></code> will provide possible arguments for rendering options (e.g. portrait aspect ratio)</li>
 <li>After knitting the poster, you can preview how it will look after the screenshot by opening the html file in google chrome (show in new window in the Rstudio viewer), clicking on “toggle device toolbar” and setting the dimensions to the viewport dimensions from <code>render_poster_image</code>. The default width is 1600 pixels x 1200 pixels for height. I’ve found this to generate reasonable font sizes for the amount of information I want to include on a poster, but a smaller window will result in larger font and larger windows will result in smaller fonts. You can also change the font explicitly in the rmarkdown document using html tags.</li>
 <li>use xaragin::inf_mr() to automatically re-render the document everytime you save.</li>
 <li>A CSS code chunk is at the top of the template document. You can change these values to change the look of the document. You can also add your own CSS document in the YAML if preferred.</li>
 <li>If your university has font/color branding guidelines, they can be replicated exactly in the CSS</li>
-<li>Chunk options for r or other code chunks are here: <a href="https://rmarkdown.rstudio.com/lesson-3.html" class="uri">https://rmarkdown.rstudio.com/lesson-3.html</a>
+<li>Chunk options for r or other code chunks are here: <a href="https://rmarkdown.rstudio.com/lesson-3.html" class="external-link uri">https://rmarkdown.rstudio.com/lesson-3.html</a>
 </li>
-<li>I haven’t tried it yet, but presumably you could theme your poster using <a href="https://rstudio.github.io/bslib/">bslib</a> which provides easy themes for flexdashboard…</li>
+<li>I haven’t tried it yet, but presumably you could theme your poster using <a href="https://rstudio.github.io/bslib/" class="external-link">bslib</a> which provides easy themes for flexdashboard…</li>
 </ul>
 </div>
-<div id="references" class="section level2">
-<h2 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h2>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
 <ul>
-<li>JJ Allaire, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng and Winston Chang (2017). rmarkdown: Dynamic Documents for R. R package version 1.8. <a href="https://CRAN.R-project.org/package=rmarkdown" class="uri">https://CRAN.R-project.org/package=rmarkdown</a>
+<li>JJ Allaire, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng and Winston Chang (2017). rmarkdown: Dynamic Documents for R. R package version 1.8. <a href="https://CRAN.R-project.org/package=rmarkdown" class="external-link uri">https://CRAN.R-project.org/package=rmarkdown</a>
 </li>
-<li>Barbara Borges and JJ Allaire (2017). flexdashboard: R Markdown Format for Flexible Dashboards. R package version 0.5.1. <a href="https://CRAN.R-project.org/package=flexdashboard" class="uri">https://CRAN.R-project.org/package=flexdashboard</a>
+<li>Barbara Borges and JJ Allaire (2017). flexdashboard: R Markdown Format for Flexible Dashboards. R package version 0.5.1. <a href="https://CRAN.R-project.org/package=flexdashboard" class="external-link uri">https://CRAN.R-project.org/package=flexdashboard</a>
 </li>
 <li>Winston Chang (2021). webshot2: Take Screenshots of Web Pages. R package version 0.0.0.9000.</li>
-<li>Oscar de León (2021). postr: Prepare reproducible posters using R Markdown. R package version 0.0.0.9000. <a href="https://github.com/odeleongt/postr" class="uri">https://github.com/odeleongt/postr</a>
+<li>Oscar de León (2021). postr: Prepare reproducible posters using R Markdown. R package version 0.0.0.9000. <a href="https://github.com/odeleongt/postr" class="external-link uri">https://github.com/odeleongt/postr</a>
 </li>
 </ul>
 </div>
@@ -163,37 +155,49 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/rbcavanaugh/flex.poster/">https://​github.com/​rbcavanaugh/​flex.poster/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/rbcavanaugh/flex.poster/issues/">https://​github.com/​rbcavanaugh/​flex.poster/​issues/​</a>
-</li>
+<li><a href="https://github.com/rbcavanaugh/flex.poster/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/rbcavanaugh/flex.poster/issues/" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-2">GPL-2</a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-2" class="external-link">GPL-2</a></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing flex.poster</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Rob Cavanaugh <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Rob Cavanaugh.</p>
+  <p></p>
+<p>Developed by Rob Cavanaugh.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -201,6 +205,8 @@
 
   
 
+
+  
 
   </body>
 </html>
